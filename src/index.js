@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+import ButtonComponent from './ButtonComponent';
+import HeaderOneComponent from './HeaderOneComponent';
+import HeaderTwoComponent from './HeaderTwoComponent';
+import HeaderThreeComponent from './HeaderThreeComponent';
+import HeaderFourComponent from './HeaderFourComponent';
+import TextInputComponent from './TextInputComponent';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+class App extends Component {
+	render() {
+		return( 
+			<div>
+				<ButtonComponent value='Button Text' />
+				<HeaderOneComponent value='Header 1' />
+				<HeaderTwoComponent value='Header 2' />
+				<HeaderThreeComponent value='Header 3' />
+				<HeaderFourComponent value='Header 4'/>
+				<TextInputComponent />
+			</div>
+		);
+	}
+}
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+ReactDOM.render(<App />, document.querySelector('.container'));
