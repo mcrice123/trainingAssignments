@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 
+//import '../../style/style.css';
+
 const ButtonComponent = (props) => {
+	const primary = props.primary ? ' primary' : '';
+
 	return(
-		<button type="button">{props.value}</button>
+		<div>
+		<button className={`btn${primary}`} type="button">{props.value}</button>
+		</div>
 	);
 }
 export default ButtonComponent;

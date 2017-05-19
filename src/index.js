@@ -9,15 +9,34 @@ import HeaderFourComponent from './HeaderFourComponent';
 import TextInputComponent from './TextInputComponent';
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			cat: ' '
+		}
+	}
+
+	onInputChange(event) {
+		this.setState({ cat: event.target.value });
+	}
+
 	render() {
 		return( 
 			<div>
-				<ButtonComponent value='Button Text' />
+				<ButtonComponent value='Primary Button' primary={true} />
+				<ButtonComponent value='Secondary Button' primary={false} />
 				<HeaderOneComponent value='Header 1' />
 				<HeaderTwoComponent value='Header 2' />
 				<HeaderThreeComponent value='Header 3' />
 				<HeaderFourComponent value='Header 4'/>
-				<TextInputComponent />
+				<TextInputComponent 
+					type="text" 
+					name="Your cat's name:"
+					placeholder='Whiskers' 
+					onChange={event => this.onInputChange(event)}
+					/>
+				<div><div id="the-best">{this.state.cat}</div> is the best!</div>
 			</div>
 		);
 	}
