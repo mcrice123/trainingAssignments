@@ -1,3 +1,6 @@
+// Component that renders an input box for text in HTML
+// Author: Maria Rice
+
 import React, { Component } from 'react';
 
 const TextInputComponent = (props) => {

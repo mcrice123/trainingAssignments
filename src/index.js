@@ -1,3 +1,6 @@
+// The app component for demonstrating the use of various functional components.
+// Author: Maria Rice
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 

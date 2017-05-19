@@ -1,3 +1,6 @@
+// Component that renders an h4 header in HTML
+// Author: Maria Rice
+
 import React, { Component } from 'react';
 
 const HeaderFourComponent = (props) => {

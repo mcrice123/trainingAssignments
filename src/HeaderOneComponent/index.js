@@ -1,3 +1,6 @@
+// Component that renders an h1 header in HTML
+// Author: Maria Rice
+
 import React, { Component } from 'react';
 
 const HeaderOneComponent = (props) => {

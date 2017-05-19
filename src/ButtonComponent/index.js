@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+// Component that renders a button in HTML
+// Author: Maria Rice
 
-//import '../../style/style.css';
+
+import React, { Component } from 'react';
 
 const ButtonComponent = (props) => {
 	const primary = props.primary ? ' primary' : '';
